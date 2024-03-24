@@ -2,7 +2,7 @@ import { getProductsListWithSort } from "@lib/data"
 import ProductPreview from "@modules/products/components/product-preview"
 import { Pagination } from "@modules/store/components/pagination"
 import { SortOptions } from "@modules/store/components/refinement-list/sort-products"
-import { getRegion } from "app/actions"
+import { getRegion } from "lib/data"
 
 const PRODUCT_LIMIT = 12
 

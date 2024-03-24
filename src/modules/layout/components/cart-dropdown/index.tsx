@@ -150,19 +150,6 @@ const CartDropdown = ({
                     ))}
                 </div>
                 <div className="p-4 flex flex-col gap-y-4 text-small-regular">
-                  <div className="flex items-center justify-between">
-                    <span className="text-ui-fg-base font-semibold">
-                      Subtotal{" "}
-                      <span className="font-normal">(excl. taxes)</span>
-                    </span>
-                    <span className="text-large-semi">
-                      {formatAmount({
-                        amount: cartState.subtotal || 0,
-                        region: cartState.region,
-                        includeTaxes: false,
-                      })}
-                    </span>
-                  </div>
                   <LocalizedClientLink href="/cart" passHref>
                     <Button className="w-full bg-white text-black hover:bg-white/80" size="large">
                       Go to cart

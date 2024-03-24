@@ -107,15 +107,15 @@ const Item = ({ item, region, type = "full" }: ItemProps) => {
       <Table.Cell className="!pr-0">
         <span
           className={clx("!pr-0", {
-            "flex flex-col items-end h-full justify-center": type === "preview",
+            "flex flex-col items-end h-full": type === "preview",
           })}
         >
           {type === "preview" && (
             <span className="flex gap-x-1 ">
-              <Text className="text-ui-fg-muted">{item.quantity} </Text>
+              <Text className="text-ui-fg-subtle">X{item.quantity} </Text>
             </span>
           )}
-          <LineItemPrice item={item} region={region} style="tight" />
+          <LineItemPrice item={item} region={region} style="tight" className="text-right"/>
         </span>
       </Table.Cell>
     </Table.Row>

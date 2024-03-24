@@ -1,3 +1,4 @@
+
 import Addresses from "@modules/checkout/components/addresses"
 import Shipping from "@modules/checkout/components/shipping"
 import Payment from "@modules/checkout/components/payment"
@@ -28,16 +29,7 @@ export default async function CheckoutForm() {
     return null
   }
 
-  // const delay = (ms: number) => new Promise((resolve) => setTimeout(resolve, ms));
 
-  // const cart = await Promise.race([
-  //   createPaymentSessions(cartId),
-  //   delay(2000).then(() => null) // Resolve to null after 2000ms
-  // ]) as CartWithCheckoutStep;
-
-  // if (!cart) {
-  //   return null;
-  // }
 
 
   cart.checkout_step = cart && getCheckoutStep(cart)

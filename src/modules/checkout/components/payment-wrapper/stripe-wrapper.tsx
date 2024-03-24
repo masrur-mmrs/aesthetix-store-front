@@ -1,34 +1,32 @@
 "use client"
 
-import { StripeElementsOptions, loadStripe } from "@stripe/stripe-js"
+import { Stripe, StripeElementsOptions } from "@stripe/stripe-js"
 import { Elements } from "@stripe/react-stripe-js"
 
 import { PaymentSession } from "@medusajs/medusa"
-import { useState } from "react"
 
 type StripeWrapperProps = {
-    paymentSession: PaymentSession | null
+    paymentSession: PaymentSession
+    stripeKey?: string
+    stripePromise: Promise<Stripe | null> | null
     children: React.ReactNode
   }
 
-const stripePromise = loadStripe("pk_test_51OtF9ZDL4f9DbLaDrN0TUZ6ovMQY2ictowzX5a0wn8M0GvmZbRpf9xZAOhAoV1YzNvDa8wL4SQfOwYBu0yRm2ZcL00hFjsKvK1")
-
 const StripeWrapper: React.FC<StripeWrapperProps> = ({
     paymentSession,
+    stripeKey,
+    stripePromise,
     children,
   }) => {
-
-    const [clientSecret, setClientSecret] = useState()
-
     const options: StripeElementsOptions = {
       clientSecret: paymentSession!.data?.client_secret as string | undefined,
     }
   
-    // if (!stripeKey) {
-    //   throw new Error(
-    //     "Stripe key is missing. Set NEXT_PUBLIC_STRIPE_KEY environment variable."
-    //   )
-    // }
+    if (!stripeKey) {
+      throw new Error(
+        "Stripe key is missing. Set NEXT_PUBLIC_STRIPE_KEY environment variable."
+      )
+    }
   
     if (!stripePromise) {
       throw new Error(

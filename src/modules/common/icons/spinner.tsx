@@ -15,6 +15,7 @@ const Spinner: React.FC<IconProps> = ({
       xmlns="http://www.w3.org/2000/svg"
       fill="none"
       viewBox="0 0 24 24"
+      strokeWidth="2"
       {...attributes}
     >
       <circle
@@ -23,7 +24,7 @@ const Spinner: React.FC<IconProps> = ({
         cy="12"
         r="10"
         stroke={color}
-        strokeWidth="4"
+        strokeWidth="1"
       ></circle>
       <path
         className="opacity-75"

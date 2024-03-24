@@ -1,6 +1,6 @@
 "use client"
 
-import React, { useCallback, useEffect, useMemo, useState } from "react"
+import { useCallback, useContext, useEffect, useMemo, useState } from "react"
 import { usePathname, useRouter, useSearchParams } from "next/navigation"
 import { RadioGroup } from "@headlessui/react"
 import ErrorMessage from "@modules/checkout/components/error-message"
@@ -10,15 +10,12 @@ import { Button, Container, Heading, Text, Tooltip, clx } from "@medusajs/ui"
 import { CardElement } from "@stripe/react-stripe-js"
 import { StripeCardElementOptions } from "@stripe/stripe-js"
 
-
 import Divider from "@modules/common/components/divider"
 import Spinner from "@modules/common/icons/spinner"
 import PaymentContainer from "@modules/checkout/components/payment-container"
 import { setPaymentMethod } from "@modules/checkout/actions"
 import { paymentInfoMap } from "@lib/constants"
-
-
-
+import { StripeContext } from "@modules/checkout/components/payment-wrapper"
 
 const Payment = ({
   cart,
@@ -37,11 +34,10 @@ const Payment = ({
   const isOpen = searchParams.get("step") === "payment"
 
   const isStripe = cart?.payment_session?.provider_id === "stripe"
+  const stripeReady = useContext(StripeContext)
 
   const paymentReady =
     cart?.payment_session && cart?.shipping_methods.length !== 0
-
-  
 
   const useOptions: StripeCardElementOptions = useMemo(() => {
     return {
@@ -103,7 +99,6 @@ const Payment = ({
     setError(null)
   }, [isOpen])
 
-
   return (
     <div className="bg-white">
       <div className="flex flex-row items-center justify-between mb-6">
@@ -156,25 +151,24 @@ const Payment = ({
                 })}
             </RadioGroup>
 
-            {isStripe && (
-              
-                <div className="mt-5 transition-all duration-150 ease-in-out">
-                  <Text className="txt-medium-plus text-ui-fg-base mb-1">
-                    Enter your card details:
-                  </Text>
-                  <CardElement
-                    options={useOptions as StripeCardElementOptions}
-                    onChange={(e) => {
-                      setCardBrand(
-                        e.brand &&
-                          e.brand.charAt(0).toUpperCase() + e.brand.slice(1)
-                      )
-                      setError(e.error?.message || null)
-                      setCardComplete(e.complete)
-                    }}
-                  />
-                </div>
-              
+            {isStripe && stripeReady && (
+              <div className="mt-5 transition-all duration-150 ease-in-out">
+                <Text className="txt-medium-plus text-ui-fg-base mb-1">
+                  Enter your card details:
+                </Text>
+
+                <CardElement
+                  options={useOptions as StripeCardElementOptions}
+                  onChange={(e) => {
+                    setCardBrand(
+                      e.brand &&
+                        e.brand.charAt(0).toUpperCase() + e.brand.slice(1)
+                    )
+                    setError(e.error?.message || null)
+                    setCardComplete(e.complete)
+                  }}
+                />
+              </div>
             )}
 
             <ErrorMessage error={error} />

@@ -34,7 +34,7 @@ const Hits = ({
       )}
     >
       <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-4">
-        {hits.slice(0, 6).map((hit, index) => (
+        {hits.slice(0, 3).map((hit, index) => (
           <li
             key={index}
             className={clx("list-none", {

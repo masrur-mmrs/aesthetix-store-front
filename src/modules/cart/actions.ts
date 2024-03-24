@@ -14,7 +14,7 @@ import {
   updateCart,
   updateItem,
 } from "@lib/data"
-import { getRegion } from "app/actions"
+import { getRegion } from "@lib/data"
 
 /**
  * Retrieves the cart based on the cartId cookie
