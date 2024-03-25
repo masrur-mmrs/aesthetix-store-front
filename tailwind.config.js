@@ -22,7 +22,7 @@ module.exports = {
                 padding: "padding-top padding-right padding-bottom padding-left",
             },
             backgroundImage: {
-                'hero': 'url("https://firebasestorage.googleapis.com/v0/b/wants-not-needs.appspot.com/o/assets%2FheroImage.jpeg?alt=media&token=5e25e694-65ea-4673-917b-81e978ac09b6")',
+                'hero': 'url("https://raw.githubusercontent.com/masrur-mmrs/aesthetix-store-front/main/src/modules/img/hero-background.jpeg")',
                 // 'hero': 'url("/src/modules/img/hero-background.jpeg")',
             },
             colors: {
