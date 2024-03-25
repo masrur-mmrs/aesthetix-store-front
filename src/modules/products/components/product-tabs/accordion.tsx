@@ -44,9 +44,9 @@ const Item: React.FC<AccordionItemProps> = ({
   triggerable,
   ...props
 }) => {
-  return /* @ts-expect-error */(
-    
-    <AccordionPrimitive.Item
+  return (
+    /* @ts-expect-error */
+  <AccordionPrimitive.Item
       {...props}
       className={clx(
         "border-grey-20 group border-t last:mb-0 last:border-b",
@@ -54,7 +54,7 @@ const Item: React.FC<AccordionItemProps> = ({
         className
       )}
     >
-
+      {/* /* @ts-expect-error */ }
       <AccordionPrimitive.Header className="px-1">
         <div className="flex flex-col">
           <div className="flex w-full items-center justify-between">
