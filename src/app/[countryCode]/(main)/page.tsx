@@ -1,5 +1,6 @@
 import { Product } from "@medusajs/medusa"
 import { Metadata } from "next"
+import { OpenGraph } from "next/dist/lib/metadata/types/opengraph-types"
 
 import { getCollectionsList, getProductsList, getRegion } from "@lib/data"
 import FeaturedProducts from "@modules/home/components/featured-products"
@@ -9,10 +10,21 @@ import InfiniteSlider from "@modules/home/components/infiniteslider"
 import { ProductCollectionWithPreviews } from "types/global"
 import { cache } from "react"
 
+const openGraph: OpenGraph = {
+    type: "website",
+    title: "Aesthetix Plus",
+    url: "https://www.aesthetixplus.org",
+    siteName: "Aesthetix Plus",
+    images: [{
+      url: "https://raw.githubusercontent.com/masrur-mmrs/aesthetix-store-front/main/src/app/opengrapg-image.png",
+    }],
+}
+
 export const metadata: Metadata = {
   title: "Aesthetix",
   description:
     "Elevate your style with Aesthetix, where sophistication meets comfort in every stitch. Discover premium-quality clothing crafted for modern individuals who appreciate timeless elegance and impeccable design. Explore our versatile collection today.",
+    openGraph: openGraph,
 }
 
 const getCollectionsWithProducts = cache(
