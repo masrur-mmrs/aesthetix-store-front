@@ -1,6 +1,5 @@
 import { ImageResponse } from 'next/og';
 import Image from 'next/image';
-import OpenGraph from "../opengraph-image.png"
 // App router includes @vercel/og.
 // No need to install it.
  
@@ -23,7 +22,7 @@ export async function GET() {
         }}
       >
         <Image
-        src={OpenGraph}
+        src="https://raw.githubusercontent.com/masrur-mmrs/aesthetix-store-front/main/src/app/opengrapg-image.png"
         alt='opengraph image'
         ></Image>
       </div>
