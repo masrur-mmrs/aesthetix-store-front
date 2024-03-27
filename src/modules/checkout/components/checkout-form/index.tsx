@@ -1,4 +1,3 @@
-
 import Addresses from "@modules/checkout/components/addresses"
 import Shipping from "@modules/checkout/components/shipping"
 import Payment from "@modules/checkout/components/payment"
@@ -19,7 +18,6 @@ export default async function CheckoutForm() {
     return null
   }
 
-  
   // create payment sessions and get cart
   const cart = (await createPaymentSessions(cartId).then(
     (cart) => cart
@@ -28,9 +26,6 @@ export default async function CheckoutForm() {
   if (!cart) {
     return null
   }
-
-
-
 
   cart.checkout_step = cart && getCheckoutStep(cart)
 
