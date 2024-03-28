@@ -28,6 +28,10 @@ const nextConfig = withStoreConfig({
                 protocol: "https",
                 hostname: "raw.githubusercontent.com",
             },
+            {
+                protocol: "https",
+                hostname: "aesthetix-backend.up.railway.app",
+            }
         ],
     },
 })
