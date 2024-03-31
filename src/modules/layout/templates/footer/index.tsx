@@ -44,7 +44,7 @@ export default async function Footer() {
                   Categories
                 </span>
                 <ul className="grid grid-cols-1 gap-2">
-                  {productCategories?.slice(0, 3).map((c) => {
+                  {productCategories?.slice(0, 12).map((c) => {
                     if (c.parent_category) {
                       return
                     }

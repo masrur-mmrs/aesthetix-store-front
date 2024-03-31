@@ -25,6 +25,12 @@ module.exports = {
                 'hero': 'url("https://raw.githubusercontent.com/masrur-mmrs/aesthetix-store-front/main/src/modules/img/hero-background.jpeg")',
                 // 'hero': 'url("/src/modules/img/hero-background.jpeg")',
             },
+            backgroundSize: {
+                'auto': 'auto',
+                'cover': 'cover',
+                'contain': 'contain',
+                // Add custom sizes if needed
+            },
             colors: {
                 grey: {
                     0: "#FFFFFF",
@@ -164,6 +170,11 @@ module.exports = {
                 leave: "leave 150ms ease-in forwards",
                 ["infinite-slider"]: "infiniteSlider 15s linear infinite",
             },
+        },
+    },
+    variants: {
+        extend: {
+            backgroundSize: ['responsive'], // Enable responsive variants
         },
     },
     plugins: [require("tailwindcss-radix")(), require('flowbite/plugin'), ],
