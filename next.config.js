@@ -31,7 +31,11 @@ const nextConfig = withStoreConfig({
             {
                 protocol: "https",
                 hostname: "aesthetix-backend.up.railway.app",
-            }
+            },
+            {
+                protocol: "https",
+                hostname: "aesthetix.s3.us-east-2.amazonaws.com",
+            },
         ],
     },
 })

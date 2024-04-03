@@ -6,6 +6,10 @@ import { getCollectionsList, getProductsList, getRegion } from "@lib/data"
 import FeaturedProducts from "@modules/home/components/featured-products"
 import Hero from "@modules/home/components/hero"
 import InfiniteSlider from "@modules/home/components/infiniteslider"
+import DiscountBanner from "@modules/home/components/discount-banner"
+
+import DiscountBanner1 from "@modules/img/DiscountBanner1.jpeg"
+import DiscountBanner2 from "@modules/img/DiscountBanner2.jpeg"
 
 import { ProductCollectionWithPreviews } from "types/global"
 import { cache } from "react"
@@ -83,6 +87,10 @@ export default async function Home({
   return (
     <>
       <Hero />
+      <div className="sm:flex sm:justify-center md:justify-center">
+        <DiscountBanner src={DiscountBanner1}/>
+        <DiscountBanner src={DiscountBanner2}/>
+      </div>
       <div className="py-2">
         <ul className="flex flex-col gap-x-6">
           <FeaturedProducts collections={collections} region={region} />
