@@ -6,14 +6,16 @@ import TransparentLogo from "@modules/img/logo-transparent-bg.png"
 const Hero = () => {
 
   return (   
-      <div className="h-[80vh] w-full relative bg-no-repeat bg-fixed bg-cover bg-hero sm:bg-auto">
+      <div className="h-[80vh] w-full relative bg-no-repeat bg-fixed bg-cover bg-hero sm:bg-auto bg-[55%]">
         <div className="absolute backdrop-brightness-50 inset-0 z-10 flex flex-col justify-center items-center text-center gap-6 ">
           <span className="invert">
             <Image
             src={TransparentLogo}
             alt="Logo Transparent"
-            width={500}
-            height={500}
+            layout="responsive"
+            style={{width: '100vw'}}
+            width={250}
+            height={250}
             />
           </span>
         </div>

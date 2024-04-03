@@ -22,7 +22,7 @@ module.exports = {
                 padding: "padding-top padding-right padding-bottom padding-left",
             },
             backgroundImage: {
-                'hero': 'url("https://raw.githubusercontent.com/masrur-mmrs/aesthetix-store-front/main/src/modules/img/hero-background.jpeg")',
+                'hero': 'url("https://aesthetix.s3.us-east-2.amazonaws.com/HeroImage.jpg")',
                 // 'hero': 'url("/src/modules/img/hero-background.jpeg")',
             },
             backgroundSize: {
