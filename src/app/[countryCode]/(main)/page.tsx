@@ -8,7 +8,7 @@ import Hero from "@modules/home/components/hero"
 import InfiniteSlider from "@modules/home/components/infiniteslider"
 import DiscountBanner from "@modules/home/components/discount-banner"
 
-import DiscountBanner1 from "@modules/img/DiscountBanner1.jpeg"
+import DiscountBanner1 from "@modules/img/DiscountBanner1.jpg"
 import DiscountBanner2 from "@modules/img/DiscountBanner2.jpeg"
 
 import { ProductCollectionWithPreviews } from "types/global"
