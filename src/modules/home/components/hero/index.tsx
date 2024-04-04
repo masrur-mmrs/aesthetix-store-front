@@ -21,7 +21,8 @@ const Hero = () => {
             src={TransparentLogo}
             alt="Logo Transparent"
             layout="responsive"
-            sizes="100vw"
+            height={250}
+            width={250}
             />
         </span>
       </div>
