@@ -7,24 +7,24 @@ import HeroBackground from "@modules/img/hero-background.jpeg"
 const Hero = () => {
 
   return (
-      <div className="relative">
-          <Image
-          src={HeroBackground}
-          alt="Hero Background"
-          objectFit="cover"
-          layout="fill"
-          sizes="100vh"
-          style={{filter: 'brightness(50%)'}}
-            />
-      <span className="invert">
+      <div className="relative w-full h-screen">
         <Image
             src={TransparentLogo}
             alt="Logo Transparent"
-            layout="responsive"
-            height={250}
-            width={250}
+            layout="fill"
+            objectFit="contain"
+            sizes="75vh"
+            style={{filter: 'invert(1)'}}
+            className="z-10"
             />
-        </span>
+          <Image
+          src={HeroBackground}
+          alt="Hero Background"
+          layout="fill"
+          objectFit="cover"
+          style={{filter: 'brightness(50%)'}}
+          className="absolute inset-0"
+            />
       </div>
   )
 }
