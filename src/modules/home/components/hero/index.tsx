@@ -1,24 +1,28 @@
 'use client'
 import Image from "next/image"
 import TransparentLogo from "@modules/img/logo-transparent-bg.png"
+import HeroBackground from "@modules/img/hero-background.jpeg"
 
 
 const Hero = () => {
 
-  return (   
-      <div className="h-[100vh] w-full relative bg-no-repeat bg-fixed bg-auto bg-hero bg-center bg-origin-content">
-        <div className="absolute backdrop-brightness-50 inset-0 z-10 flex flex-col justify-center items-center text-center gap-6 ">
-          <span className="invert">
-            <Image
+  return (
+      <div className="relative">
+          <Image
+          src={HeroBackground}
+          alt="Hero Background"
+          objectFit="cover"
+          layout="fill"
+          sizes="100vh"
+          style={{filter: 'brightness(50%)'}}
+            />
+      <span className="invert">
+        <Image
             src={TransparentLogo}
             alt="Logo Transparent"
-            layout="responsive"
-            style={{width: '100vw'}}
-            width={250}
-            height={250}
+            sizes="100vw"
             />
-          </span>
-        </div>
+        </span>
       </div>
   )
 }
