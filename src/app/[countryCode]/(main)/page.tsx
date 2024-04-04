@@ -10,6 +10,7 @@ import DiscountBanner from "@modules/home/components/discount-banner"
 
 import DiscountBanner1 from "@modules/img/DiscountBanner1.jpg"
 import DiscountBanner2 from "@modules/img/DiscountBanner2.jpeg"
+import DiscountBanner3 from "@modules/img/DiscountBanner3.jpeg"
 
 import { ProductCollectionWithPreviews } from "types/global"
 import { cache } from "react"
@@ -89,6 +90,7 @@ export default async function Home({
       <Hero />
       <div className="sm:flex sm:justify-center md:justify-center">
         <DiscountBanner src={DiscountBanner1}/>
+        <DiscountBanner src={DiscountBanner3}/>
         <DiscountBanner src={DiscountBanner2}/>
       </div>
       <div className="py-2">
