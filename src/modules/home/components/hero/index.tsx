@@ -20,6 +20,7 @@ const Hero = () => {
         <Image
             src={TransparentLogo}
             alt="Logo Transparent"
+            layout="responsive"
             sizes="100vw"
             />
         </span>
