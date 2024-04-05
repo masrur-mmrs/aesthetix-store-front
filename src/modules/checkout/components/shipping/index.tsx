@@ -180,7 +180,7 @@ const Shipping: React.FC<ShippingProps> = ({
       )}
       <Divider className="mt-8" />
     </div>
-  )
+  );
 }
 
 export default Shipping
