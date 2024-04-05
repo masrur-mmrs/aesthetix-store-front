@@ -70,7 +70,6 @@ const Item = ({ item, region, type = "full" }: ItemProps) => {
       {type === "full" && (
         <Table.Cell>
           <div className="flex gap-2 items-center w-28">
-          <DeleteButton id={item.id}/>
             <CartItemSelect
               value={item.quantity}
               onChange={(value) => changeQuantity(parseInt(value.target.value))}
@@ -92,6 +91,7 @@ const Item = ({ item, region, type = "full" }: ItemProps) => {
                 )
               )}
             </CartItemSelect>
+            <DeleteButton id={item.id}/>
             {updating && <Spinner />}
           </div>
           <ErrorMessage error={error} />
@@ -110,11 +110,6 @@ const Item = ({ item, region, type = "full" }: ItemProps) => {
             "flex flex-col items-end h-full": type === "preview",
           })}
         >
-          {type === "preview" && (
-            <span className="flex gap-x-1 ">
-              <Text className="text-ui-fg-subtle">X{item.quantity} </Text>
-            </span>
-          )}
           <LineItemPrice item={item} region={region} style="tight" className="text-right"/>
         </span>
       </Table.Cell>
