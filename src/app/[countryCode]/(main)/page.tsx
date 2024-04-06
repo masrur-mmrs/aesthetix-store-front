@@ -20,7 +20,7 @@ const openGraph: OpenGraph = {
     url: "https://www.aesthetixplus.org",
     siteName: "Aesthetix Plus",
     images: [{
-      url: "https://raw.githubusercontent.com/masrur-mmrs/aesthetix-store-front/main/src/app/opengrapg-image.png",
+      url: "https://aesthetix.s3.us-east-2.amazonaws.com/Screenshot+2024-04-07+at+5.07.15%E2%80%AFAM.png",
     }],
 }
 
