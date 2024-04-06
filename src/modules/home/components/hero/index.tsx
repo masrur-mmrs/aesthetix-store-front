@@ -1,28 +1,25 @@
 'use client'
 import Image from "next/image"
 import TransparentLogo from "@modules/img/logo-transparent-bg.png"
-import HeroBackground from "@modules/img/hero-background.jpeg"
+import HeroBackground from "@modules/img/hero-image.jpg"
 
 
 const Hero = () => {
 
   return (
-      <div className="relative w-full h-screen">
+      <div className="relative w-full h-screen border-b border-black">
         <Image
             src={TransparentLogo}
             alt="Logo Transparent"
-            layout="fill"
-            objectFit="contain"
-            sizes="75vh"
-            style={{filter: 'invert(1)'}}
+            fill
+            style={{filter: 'invert(1)', objectFit: 'contain'}}
             className="z-10"
             />
           <Image
           src={HeroBackground}
           alt="Hero Background"
-          layout="fill"
-          objectFit="cover"
-          style={{filter: 'brightness(50%)'}}
+          fill
+          style={{filter: 'brightness(50%)', objectFit: 'cover'}}
           className="absolute inset-0"
             />
       </div>

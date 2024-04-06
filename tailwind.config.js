@@ -21,16 +21,6 @@ module.exports = {
                 visibility: "visibility",
                 padding: "padding-top padding-right padding-bottom padding-left",
             },
-            backgroundImage: {
-                'hero': 'url("https://aesthetix.s3.us-east-2.amazonaws.com/hero-background.jpeg")',
-                // 'hero': 'url("/src/modules/img/hero-background.jpeg")',
-            },
-            backgroundSize: {
-                'auto': 'auto',
-                'cover': 'cover',
-                'contain': 'contain',
-                // Add custom sizes if needed
-            },
             colors: {
                 grey: {
                     0: "#FFFFFF",
