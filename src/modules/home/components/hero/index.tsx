@@ -1,28 +1,33 @@
 'use client'
 import Image from "next/image"
 import TransparentLogo from "@modules/img/logo-transparent-bg.png"
-import HeroBackground from "@modules/img/hero-image.jpg"
+import HeroImage from "@modules/img/HeroImage.png"
+import ScrollDown from "../scroll-down"
+import Circle from "../circle"
 
 
 const Hero = () => {
 
   return (
-      <div className="relative w-full h-screen border-b border-black">
-        <Image
-            src={TransparentLogo}
-            alt="Logo Transparent"
-            fill
-            style={{filter: 'invert(1)', objectFit: 'contain'}}
-            className="z-10"
-            />
-          <Image
-          src={HeroBackground}
-          alt="Hero Background"
-          fill
-          style={{filter: 'brightness(50%)', objectFit: 'cover'}}
-          className="absolute inset-0"
-            />
-      </div>
+        <div className="sm:flex justify-between justify-items-center">
+            <div className="relative lg:overflow-hidden md:overflow-hidden sm:overflow-hidden">
+              <Image
+                src={TransparentLogo}
+                alt="Logo"
+              />
+              <div className="z-20 flex items-center justify-center">
+                <div className="h-full w-full flex items-center justify-center"><ScrollDown/></div>
+              </div>
+            </div>
+            <div className="relative overflow-hidden w-full">
+              <Circle/>
+              <Image
+                src={HeroImage}
+                alt="Hero Image"
+                className="z-10"
+              />
+            </div>
+        </div>
   )
 }
 

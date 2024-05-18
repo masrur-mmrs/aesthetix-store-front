@@ -1,14 +1,32 @@
 import { headers } from "next/headers"
 import { Suspense } from "react"
 
-import { listRegions } from "@lib/data"
+import {listRegions } from "@lib/data"
 import LocalizedClientLink from "@modules/common/components/localized-client-link"
 import CartButton from "@modules/layout/components/cart-button"
 import SideMenu from "@modules/layout/components/side-menu"
+import { enrichLineItems, retrieveCart } from "@modules/cart/actions"
+import { LineItem } from "@medusajs/medusa"
+
+const fetchCart = async () => {
+  const cart = await retrieveCart()
+
+  if (cart?.items.length) {
+    const enrichedItems = await enrichLineItems(cart?.items, cart?.region_id)
+    cart.items = enrichedItems as LineItem[]
+  }
+
+  return cart
+}
 
 
 export default async function Nav() {
-  const regions = await listRegions().then((regions) => regions)
+  
+  const regions = await listRegions().then((regions) => regions);
+  const cart:any = await fetchCart();
+
+
+
 
   return (
     <div className="sticky top-0 inset-x-0 z-50 group">
@@ -57,7 +75,7 @@ export default async function Nav() {
                 </LocalizedClientLink>
               }
             >
-              <CartButton />
+              <CartButton cart={cart}/>
             </Suspense>
           </div>
         </nav>
