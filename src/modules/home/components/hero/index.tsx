@@ -14,6 +14,7 @@ const Hero = () => {
               <Image
                 src={TransparentLogo}
                 alt="Logo"
+                priority
               />
               <div className="z-20 flex items-center justify-center">
                 <div className="h-full w-full flex items-center justify-center"><ScrollDown/></div>
@@ -25,6 +26,7 @@ const Hero = () => {
                 src={HeroImage}
                 alt="Hero Image"
                 className="z-10"
+                priority
               />
             </div>
         </div>
