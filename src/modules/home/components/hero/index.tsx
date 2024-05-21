@@ -9,7 +9,7 @@ import Circle from "../circle"
 const Hero = () => {
 
   return (
-        <div className="sm:flex justify-between justify-items-center">
+        <div className="sm:flex justify-between justify-items-center border-b">
             <div className="relative lg:overflow-hidden md:overflow-hidden sm:overflow-hidden">
               <Image
                 src={TransparentLogo}

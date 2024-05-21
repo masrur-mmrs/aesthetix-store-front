@@ -88,8 +88,8 @@ export default async function Home({
     <>
       <Hero />
       <div className="sm:flex sm:justify-center md:justify-center">
-        <DiscountBanner src={DiscountBanner1}/>
-        <DiscountBanner src={DiscountBanner2}/>
+        {/* <DiscountBanner src={DiscountBanner1}/>
+        <DiscountBanner src={DiscountBanner2}/> */}
       </div>
       <div className="py-2">
         <ul className="flex flex-col gap-x-6">
