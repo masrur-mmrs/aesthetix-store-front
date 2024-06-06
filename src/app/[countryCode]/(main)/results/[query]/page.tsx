@@ -7,7 +7,8 @@ import { SortOptions } from "@modules/store/components/refinement-list/sort-prod
 
 export const metadata: Metadata = {
   title: "Search",
-  description: "Explore all of our products.",
+  description: "Find exactly what you're looking for with ease at Aesthetix. Use our advanced search feature to explore our extensive collection of premium clothing and accessories. Whether you're seeking the perfect T-shirt, tailored shirt, cozy hoodie, or trendy merch, Aesthetix has it all. Discover stylish apparel designed for comfort and elegance. Shop now and enjoy seamless browsing with personalized search results at Aesthetix.",
+  keywords: "Aesthetix search, find clothing, premium apparel search, stylish fashion, high-quality clothing, modern fashion search, comfortable hoodies, tailored shirts, unique merch, wardrobe essentials"
 }
 
 type Params = {

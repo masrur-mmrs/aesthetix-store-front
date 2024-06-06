@@ -53,8 +53,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       `${title} category.`
 
     return {
-      title: `${title} | Medusa Store`,
-      description,
+      title: `${title} | Aesthetix Store`,
+      description: "Explore Aesthetix’s diverse clothing categories to find the perfect pieces for every style and occasion. Our premium collections include everything from timeless T-shirts and sophisticated shirts to cozy hoodies and unique merch. Each category offers high-quality, stylish apparel designed to elevate your wardrobe. Discover your next fashion staple today with Aesthetix’s carefully curated selection.",
+      keywords: "Aesthetix categories, premium clothing, stylish apparel, fashion collections, high-quality T-shirts, sophisticated shirts, cozy hoodies, unique merch, wardrobe essentials, free shipping",
       alternates: {
         canonical: `${params.category.join("/")}`,
       },

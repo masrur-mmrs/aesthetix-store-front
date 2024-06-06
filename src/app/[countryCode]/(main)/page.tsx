@@ -6,10 +6,6 @@ import { getCollectionsList, getProductsList, getRegion } from "@lib/data"
 import FeaturedProducts from "@modules/home/components/featured-products"
 import Hero from "@modules/home/components/hero"
 import InfiniteSlider from "@modules/home/components/infiniteslider"
-import DiscountBanner from "@modules/home/components/discount-banner"
-
-import DiscountBanner1 from "@modules/img/DiscountBanner1.jpg"
-import DiscountBanner2 from "@modules/img/DiscountBanner2.jpeg"
 
 import { ProductCollectionWithPreviews } from "types/global"
 import { cache } from "react"
@@ -25,10 +21,11 @@ const openGraph: OpenGraph = {
 }
 
 export const metadata: Metadata = {
-  title: "Aesthetix",
+  title: "Aesthetix | Premium Clothing & Modern Style for Every Occasion",
   description:
-    "Elevate your style with Aesthetix, where sophistication meets comfort in every stitch. Discover premium-quality clothing crafted for modern individuals who appreciate timeless elegance and impeccable design. Explore our versatile collection today.",
-    openGraph: openGraph,
+    "Welcome to Aesthetix, your destination for premium clothing that blends timeless elegance with modern style. Explore our curated collections of high-quality T-shirts, sophisticated shirts, cozy hoodies, and unique merch, all crafted to elevate your wardrobe. Enjoy a seamless shopping experience and discover the perfect pieces for every occasion. Elevate your style with Aesthetix, where sophistication meets comfort in every stitch. Discover premium-quality clothing crafted for modern individuals who appreciate timeless elegance and impeccable design. Explore our versatile collection today.",
+  openGraph: openGraph,
+  keywords: "Aesthetix clothing, premium apparel, modern fashion, stylish T-shirts, refined shirts, cozy hoodies, unique merch, high-quality clothing, wardrobe essentials, free shipping"
 }
 
 const getCollectionsWithProducts = cache(
@@ -88,8 +85,6 @@ export default async function Home({
     <>
       <Hero />
       <div className="sm:flex sm:justify-center md:justify-center">
-        {/* <DiscountBanner src={DiscountBanner1}/>
-        <DiscountBanner src={DiscountBanner2}/> */}
       </div>
       <div className="py-2">
         <ul className="flex flex-col gap-x-6">

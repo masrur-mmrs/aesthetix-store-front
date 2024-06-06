@@ -4,8 +4,9 @@ import { SortOptions } from "@modules/store/components/refinement-list/sort-prod
 import StoreTemplate from "@modules/store/templates"
 
 export const metadata: Metadata = {
-  title: "Store",
-  description: "Explore all of our products.",
+  title: "Aesthetix Store",
+  description: "Shop the latest trends in premium-quality clothing at Aesthetix. Our online store features a wide selection of stylish apparel and accessories, crafted for those who appreciate timeless elegance and modern sophistication. Discover versatile collections designed to elevate your wardrobe, from classic T-shirts and tailored shirts to cozy hoodies and unique merch.",
+  keywords: "Aesthetix clothing, premium clothing, stylish apparel, online clothing store, modern fashion, timeless elegance, comfortable hoodies, versatile T-shirts, unique merch, free shipping",
 }
 
 type Params = {

@@ -54,8 +54,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   }
 
   const metadata = {
-    title: `${collection.title} | Medusa Store`,
-    description: `${collection.title} collection`,
+    title: `${collection.title} | Aesthetix Store`,
+    description: `${collection.title} collection. Discover the exclusive collections at Aesthetix, featuring a curated range of premium clothing designed to fit every style and occasion. From chic T-shirts and refined shirts to cozy hoodies and distinctive merch, our collections embody the perfect blend of comfort and sophistication. Explore Aesthetix Collections today to elevate your wardrobe with our high-quality, fashion-forward pieces.`,
+    keywords: "Aesthetix collections, exclusive clothing, premium apparel, stylish T-shirts, refined shirts, cozy hoodies, unique merch, fashion-forward pieces, high-quality fashion, free shipping",
   } as Metadata
 
   return metadata
